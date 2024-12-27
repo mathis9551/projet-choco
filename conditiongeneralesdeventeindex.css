@@ -1,0 +1,47 @@
+header {
+    font-family: Arial, sans-serif;
+    background-color: #D2B48C;
+}
+
+.navbar1{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+    flex-wrap: wrap;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    gap:50px;
+    flex-wrap: wrap;
+    margin-right: 0px;
+}
+a{
+    text-decoration: none;
+    color:#4E3B31;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 14px;
+}
+main {
+    background:#FFFDD0;
+}
+
+h1 {
+    color: #4E3B31;
+    font-family: Playfair Display ;
+    font-size: 30px;
+
+}
+
+footer {
+    font-family: Arial, sans-serif;
+    background-color: #D2B48C;
+}
+.navbar2{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+    flex-wrap: wrap; }
