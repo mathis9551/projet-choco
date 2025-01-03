@@ -1,47 +1,148 @@
-header {
-    font-family: Arial, sans-serif;
-    background-color: #D2B48C;
+* {
+    box-sizing: border-box; /* Inclut les marges */
+}
+body {
+    width: 100%; /* Largeur complète */
+    height: 100vh; /* Hauteur écran */
+    margin: 0; /* Supprime marges */
 }
 
-.navbar1{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap:10px;
-    flex-wrap: wrap;
+header {
+    font-family: Arial, sans-serif; /* Police simple */
+    background-color: #3e2b2b; /* Couleur marron foncé */
+}
+
+.navbar1 {
+    padding: 20px; /* Espacement interne */
+    display: flex; /* Disposition flexible */
+    justify-content: space-between; /* Espacement égal */
+    gap: 10px; /* Espace entre éléments */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
 }
 ul {
-    display: flex;
-    justify-content: space-between;
-    gap:50px;
-    flex-wrap: wrap;
-    margin-right: 0px;
+    display: flex; /* Disposition en ligne */
+    justify-content: space-between; /* Espacement égal */
+    gap: 50px; /* Espace entre liens */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
+    margin-right: 0px; /* Pas de marge droite */
 }
-a{
-    text-decoration: none;
-    color:#4E3B31;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 14px;
+a {
+    text-decoration: none; /* Supprime soulignement */
+    color: #D2B48C; /* Couleur marron */
+    font-size: 18px; /* Taille texte */
+    font-weight: bold; /* Texte en gras */
+    margin-top: 14px; /* Espace haut */
 }
 main {
-    background:#FFFDD0;
+    background: #d2b48c;
 }
 
 h1 {
-    color: #4E3B31;
+    color: #d2b48c;
     font-family: Playfair Display ;
     font-size: 30px;
 
 }
 
-footer {
-    font-family: Arial, sans-serif;
-    background-color: #D2B48C;
+/* Réinitialisation des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.navbar2{
+
+/* Corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #3e2b2b;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Section principale (Galerie) */
+main {
     padding: 20px;
+}
+
+/* Galerie */
+.gallery {
+    margin-top: 40px;
+}
+
+/* Titre de chaque section */
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #4E3B31;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.photo-row {
     display: flex;
     justify-content: space-between;
-    gap:10px;
-    flex-wrap: wrap; }
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Style des éléments de la galerie */
+.photo-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%; /* Chaque photo occupe environ 30% de la largeur */
+    height: 350px; /* Hauteur fixée pour la zone contenant l'image */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Image à l'intérieur de chaque élément */
+.photo-item img {
+    width: 100%;
+    height: 60%; /* Hauteur de l'image fixée à 60% de la hauteur du conteneur */
+    object-fit: cover; /* L'image couvre la zone sans déformation */
+}
+
+/* Texte sous chaque image */
+.photo-item p {
+    padding: 10px;
+    font-size: 1.1rem;
+    color: #4e3b31;
+}
+
+
+
+
+footer {
+    font-family: Arial, sans-serif; /* Police simple */
+    background-color: #3e2b2b; /* Couleur marron foncé */
+}
+
+.navbar2 {
+    padding: 30px; /* Espacement interne */
+    display: flex; /* Disposition flexible */
+    justify-content: space-between; /* Espacement égal */
+    gap: 10px; /* Espace entre éléments */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
+}
+
+@media (max-width: 768px) {
+    .gallery .photo-row {
+        flex-direction: column; /* Passe en disposition verticale */
+        gap: 30px; /* espacement entre les éléments */
+    }
+
+    .photo-item {
+        width: 100%; /* Les éléments occupent toute la largeur */
+    }
+}

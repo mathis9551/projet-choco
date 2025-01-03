@@ -1,43 +1,185 @@
-header {
-    font-family: Arial, sans-serif;
-    background-color: #D2B48C;
+* {
+    box-sizing: border-box; /* Inclut les marges */
+}
+body {
+    width: 100%; /* Largeur complète */
+    height: 100vh; /* Hauteur écran */
+    margin: 0; /* Supprime marges */
 }
 
-.navbar1{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap:10px;
-    flex-wrap: wrap;
+header {
+    font-family: Arial, sans-serif; /* Police simple */
+    background-color: #3e2b2b; /* Couleur marron foncé */
+}
+
+.navbar1 {
+    padding: 20px; /* Espacement interne */
+    display: flex; /* Disposition flexible */
+    justify-content: space-between; /* Espacement égal */
+    gap: 10px; /* Espace entre éléments */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
 }
 ul {
-    display: flex;
-    justify-content: space-between;
-    gap:50px;
-    flex-wrap: wrap;
-    margin-right: 0px;
+    display: flex; /* Disposition en ligne */
+    justify-content: space-between; /* Espacement égal */
+    gap: 50px; /* Espace entre liens */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
+    margin-right: 0px; /* Pas de marge droite */
 }
-a{
-    text-decoration: none;
-    color:#4E3B31;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 14px;
+a {
+    text-decoration: none; /* Supprime soulignement */
+    color: #D2B48C; /* Couleur marron */
+    font-size: 18px; /* Taille texte */
+    font-weight: bold; /* Texte en gras */
+    margin-top: 14px; /* Espace haut */
 }
 main {
-    background:#FFFDD0;
+    background:#D2B48C;
 }
 
 h1 {
-    color: #4E3B31;
-    font-family: Playfair Display ;
+    color: #D2B48C;
+    font-family: Playfair-Display ;
     font-size: 30px;
-
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+h2 {
+    color: black;
+    font-family: Playfair-Display ;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 15px;
 }
 
+.texte{
+    width: 40%;
+
+}
+.bloc-histoire{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px){
+    .image-facade{
+        display:none;
+    }
+    .bloc-histoire .texte{
+        width: 100%;
+
+    }
+          
+}
+        
+    
+/* Conteneur de la frise */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    padding: 100px;
+}
+
+/* Style des événements */
+.event {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Positionnement des dates */
+.date {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 50%; /* Forme ovale */
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center; /* Centre horizontalement le texte */
+    line-height: 50px; /* Centre verticalement le texte */
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+    display: flex; /* Utilisation de flexbox pour un meilleur centrage */
+    justify-content: center; /* Centre le texte horizontalement */
+    align-items: center; /* Centre le texte verticalement */
+}
+
+/* Style des descriptions des événements */
+.description {
+    background-color: #fff;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Lignes reliant les événements */
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #333;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+/* Ajout de l'animation */
+.event:nth-child(even) .description {
+    margin-left: 70px;
+}
+
+.event:nth-child(odd) .description {
+    margin-right: 70px;
+}
+
+/* Pour les petits écrans, centrer la frise */
+@media (max-width: 768px) {
+    .timeline {
+        padding: 10px;
+    }
+
+    .event {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date {
+        margin-bottom: 10px;
+    }
+
+    .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* Ajout de l'animation */
+    .event:nth-child(even) .description {
+        margin-left: 0px;
+    }
+
+    .event:nth-child(odd) .description {
+        margin-right: 0px;
+    }
+}
+
+
 footer {
-    font-family: Arial, sans-serif;
-    background-color: #D2B48C;
+    font-family: Arial, sans-serif; /* Police simple */
+    background-color: #3e2b2b; /* Couleur marron foncé */
+    
 }
 .navbar2{
     padding: 20px;

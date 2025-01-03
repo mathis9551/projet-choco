@@ -1,47 +1,161 @@
-header {
-    font-family: Arial, sans-serif;
-    background-color: #D2B48C;
+* {
+    box-sizing: border-box; /* Inclut les marges */
+}
+body {
+    width: 100%; /* Largeur complète */
+    height: 100vh; /* Hauteur écran */
+    margin: 0; /* Supprime marges */
 }
 
-.navbar1{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap:10px;
-    flex-wrap: wrap;
+header {
+    font-family: Arial, sans-serif; /* Police simple */
+    background-color: #3e2b2b; /* Couleur marron foncé */
+}
+
+.navbar1 {
+    padding: 20px; /* Espacement interne */
+    display: flex; /* Disposition flexible */
+    justify-content: space-between; /* Espacement égal */
+    gap: 10px; /* Espace entre éléments */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
 }
 ul {
-    display: flex;
-    justify-content: space-between;
-    gap:50px;
-    flex-wrap: wrap;
-    margin-right: 0px;
+    display: flex; /* Disposition en ligne */
+    justify-content: space-between; /* Espacement égal */
+    gap: 50px; /* Espace entre liens */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
+    margin-right: 0px; /* Pas de marge droite */
 }
-a{
-    text-decoration: none;
-    color:#4E3B31;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 14px;
+a {
+    text-decoration: none; /* Supprime soulignement */
+    color: #D2B48C; /* Couleur marron */
+    font-size: 18px; /* Taille texte */
+    font-weight: bold; /* Texte en gras */
+    margin-top: 14px; /* Espace haut */
 }
+
 main {
-    background:#FFFDD0;
+    background:#d2b48c; /* Définit la couleur de fond du main */
 }
 
 h1 {
-    color: #4E3B31;
-    font-family: Playfair Display ;
-    font-size: 30px;
-
+    color: #d2b48c; /* Définit la couleur du titre */
+    font-family: Playfair Display ; /* Définit la police du titre */
+    font-size: 30px; /* Définit la taille de la police du titre */
 }
+
+
+main {
+    padding: 20px; /* Ajoute un espacement interne au main */
+}
+
+.intro {
+    text-align: center; /* Centre le texte dans la section */
+    margin-bottom: 30px; /* Ajoute un espacement en bas de la section */
+}
+
+.intro h1 {
+    color: #4a2c2a; /* Définit la couleur du titre dans la section intro */
+}
+
+.demarches {
+    display: flex; /* Utilise Flexbox pour organiser les articles */
+    flex-wrap: wrap; /* Permet aux articles de passer à la ligne */
+    gap: 20px; /* Ajoute un espacement de 20px entre les articles */
+}
+
+
+.demarches article {
+    flex: 1 1 calc(50% - 20px); /* Chaque article occupe 50% de la largeur moins l'espacement */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur */
+    background-color: #ddd; /* Définit la couleur de fond des articles */
+    border: 1px solid #ddd; /* Définit une bordure grise autour des articles */
+    border-radius: 8px; /* Arrondit les coins des articles */
+    padding: 20px; /* Ajoute un espacement interne aux articles */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère pour un effet de profondeur */
+}
+
+
+
+h2 {
+    color: black; /* Définit la couleur du titre h2 */
+    font-family: Playfair Display ; /* Définit la police du titre h2 */
+    font-size: 30px; /* Définit la taille de la police du titre h2 */
+}
+
+h3 {
+    color: black; /* Définit la couleur du titre h3 */
+    font-weight: 100; /* Définit un poids de police léger pour h3 */
+}
+
+/* Section pour les labels */
+.labels {
+    text-align: center; /* Centre le texte dans la section */
+    padding: 40px 20px; /* Ajoute un espacement interne autour de la section */
+    background:#d2b48c; /* Définit la couleur de fond des labels */
+}
+
+.labels h2 {
+    color: black; /* Définit la couleur du titre des labels */
+    margin-bottom: 20px; /* Ajoute un espacement sous le titre */
+}
+
+.label-list {
+    display: flex; /* Utilise Flexbox pour organiser les articles des labels */
+    flex-wrap: wrap; /* Permet aux articles de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les articles horizontalement */
+    gap: 20px; /* Ajoute un espacement de 20px entre les articles */
+}
+
+.label-list article {
+    flex: 1 1 calc(33.333% - 20px); /* Chaque article occupe environ 1/3 de la largeur */
+    max-width: 450px; /* Limite la largeur maximale des articles */
+    background-color: #ddd; /* Définit un fond gris clair pour les articles */
+    border: 1px solid #ddd; /* Ajoute une bordure grise autour des articles */
+    border-radius: 8px; /* Arrondit les coins des articles */
+    padding: 20px; /* Ajoute un espacement interne aux articles */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère pour un effet de profondeur */
+    text-align: center; /* Centre le contenu dans chaque article */
+}
+
+.label-list article img {
+    max-width: 80px; /* Limite la largeur des images à 80px */
+    margin-bottom: 10px; /* Ajoute un espacement sous l'image */
+}
+
+.label-list article h3 {
+    color: #4a2c2a; /* Définit la couleur des titres dans les articles */
+    margin-bottom: 10px; /* Ajoute un espacement sous le titre */
+}
+
+.label-list article p {
+    font-size: 0.9rem; /* Réduit légèrement la taille de la police du texte */
+    color: #555; /* Définit une couleur grise pour le texte */
+}
+
+
 
 footer {
-    font-family: Arial, sans-serif;
-    background-color: #D2B48C;
+    font-family: Arial, sans-serif; /* Police simple */
+    background-color: #3e2b2b; /* Couleur marron foncé */
 }
+
 .navbar2{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap:10px;
-    flex-wrap: wrap; }
+    padding: 20px; /* Ajoute un espacement interne */
+    display: flex; /* Utilise Flexbox pour organiser les éléments */
+    justify-content: space-between; /* Espace les éléments de manière égale */
+    gap:10px; /* Ajoute un espacement entre les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+}
+
+
+@media (max-width: 768px) {
+    .demarches article {
+        flex: 1 1 100%; /* Chaque article prend toute la largeur */
+        margin-bottom: 20px; /* Espacement entre les articles */
+    }
+    .label-list article{
+        flex: 1 1 100%; /* Chaque article prend toute la largeur */
+        margin-bottom: 20px; /* Espacement entre les articles */
+    }
+}

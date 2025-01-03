@@ -1,43 +1,89 @@
-header {
-    font-family: Arial, sans-serif;
-    background-color: #D2B48C;
+* {
+    box-sizing: border-box; /* Inclut les marges */
+}
+body {
+    width: 100%; /* Largeur complète */
+    height: 100vh; /* Hauteur écran */
+    margin: 0; /* Supprime marges */
 }
 
-.navbar1{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap:10px;
-    flex-wrap: wrap;
+header {
+    font-family: Arial, sans-serif; /* Police simple */
+    background-color: #3e2b2b; /* Couleur marron foncé */
+}
+
+.navbar1 {
+    padding: 20px; /* Espacement interne */
+    display: flex; /* Disposition flexible */
+    justify-content: space-between; /* Espacement égal */
+    gap: 10px; /* Espace entre éléments */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
 }
 ul {
-    display: flex;
-    justify-content: space-between;
-    gap:50px;
-    flex-wrap: wrap;
-    margin-right: 0px;
+    display: flex; /* Disposition en ligne */
+    justify-content: space-between; /* Espacement égal */
+    gap: 50px; /* Espace entre liens */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
+    margin-right: 0px; /* Pas de marge droite */
 }
-a{
-    text-decoration: none;
-    color:#4E3B31;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 14px;
+a {
+    text-decoration: none; /* Supprime soulignement */
+    color: #D2B48C; /* Couleur marron */
+    font-size: 18px; /* Taille texte */
+    font-weight: bold; /* Texte en gras */
+    margin-top: 14px; /* Espace haut */
 }
 main {
-    background:#FFFDD0;
+    background:#D2B48C;
 }
 
 h1 {
-    color: #4E3B31;
+    color: #D2B48C;
     font-family: Playfair Display ;
     font-size: 30px;
 
 }
 
+/* Section du plan de site */
+.site-map {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Liste principale */
+.site-map ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.site-map li {
+    margin: 10px 0;
+}
+
+.site-map a {
+    text-decoration: none;
+    color: #4E3B31;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.site-map a:hover {
+    color: #2c1a0d;
+    text-decoration: underline;
+}
+
+/* Sous-listes (indentation) */
+.site-map ul ul {
+    margin-left: 20px;
+}
+
+
 footer {
-    font-family: Arial, sans-serif;
-    background-color: #D2B48C;
+    font-family: Arial, sans-serif; /* Police simple */
+    background-color: #3e2b2b; /* Couleur marron foncé */
 }
 .navbar2{
     padding: 20px;

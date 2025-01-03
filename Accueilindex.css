@@ -1,47 +1,150 @@
-header {
-    font-family: Arial, sans-serif;
-    background-color: #D2B48C;
+* {
+    box-sizing: border-box; /* Inclut les marges */
+}
+body {
+    width: 100%; /* Largeur complète */
+    height: 100vh; /* Hauteur écran */
+    margin: 0; /* Supprime marges */
 }
 
-.navbar1{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap:10px;
-    flex-wrap: wrap;
+header {
+    font-family: Arial, sans-serif; /* Police simple */
+    background-color: #3e2b2b; /* Couleur marron foncé */
+}
+
+.navbar1 {
+    padding: 20px; /* Espacement interne */
+    display: flex; /* Disposition flexible */
+    justify-content: space-between; /* Espacement égal */
+    gap: 10px; /* Espace entre éléments */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
 }
 ul {
-    display: flex;
-    justify-content: space-between;
-    gap:50px;
-    flex-wrap: wrap;
-    margin-right: 0px;
+    display: flex; /* Disposition en ligne */
+    justify-content: space-between; /* Espacement égal */
+    gap: 50px; /* Espace entre liens */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
+    margin-right: 0px; /* Pas de marge droite */
 }
-a{
-    text-decoration: none;
-    color:#4E3B31;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 14px;
+a {
+    text-decoration: none; /* Supprime soulignement */
+    color: #D2B48C; /* Couleur marron */
+    font-size: 18px; /* Taille texte */
+    font-weight: bold; /* Texte en gras */
+    margin-top: 14px; /* Espace haut */
 }
 main {
-    background:#FFFDD0;
+    background: #FFFDD0; /* Couleur crème */
 }
 
 h1 {
-    color: #4E3B31;
-    font-family: Playfair Display ;
-    font-size: 30px;
+    color: #D2B48C; /* Couleur marron */
+    font-family: Playfair Display; /* Police élégante */
+    font-size: 30px; /* Taille texte */
+}
 
+h2 {
+    font-family: 'Playfair Display', serif; /* Police élégante */
+    font-size: 36px; /* Taille titre */
+    color: #333; /* Couleur gris foncé */
+    text-align: center; /* Centre texte */
+}
+
+.carousel {
+    box-sizing: border-box;
+    width: 100%; /* Largeur 80% écran */
+    height: 600px; /* Hauteur fixe */
+    overflow: hidden; /* Cache débordements */
+    position: relative; /* Position relative */
+    margin: auto; /* Centre horizontalement */
+    padding-bottom: 10px; /* Espace bas */
+    @media (max-width: 768px)
+     {Display:none;  
+    }
+     
+        
+    
+}
+
+.carousel-track {
+    display: flex; /* Disposition en ligne */
+    transition: transform 4s ease; /* Animation douce */
+}
+
+.carousel-item {
+    height: 600px; /* Hauteur fixe */
+    flex-shrink: 0; /* Pas de rétrécissement */
+    width: 100%; /* Largeur complète */
+    object-fit: cover; /* Conserve proportions */
+}
+
+/* Section Actualités */
+#actualites {
+    padding: 20px; /* Espacement interne */
+    background-color: #fff; /* Fond blanc */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+   
+}
+
+#actualites h2 {
+    text-align: center; /* Centre texte */
+    margin-bottom: 20px; /* Espace bas */
+}
+
+.actualites-container {
+    display: flex; /* Disposition en ligne */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
+    gap: 20px; /* Espace entre cartes */
+    justify-content: center; /* Centre cartes */
+  
+}
+
+.actualite-card {
+    width: 30%; /* Largeur fixe */
+    border: 1px solid #ddd; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    overflow: hidden; /* Cache débordements */
+    background-color: #fff; /* Fond blanc */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.3s ease; /* Animation douce */
+   
+}
+@media (max-width: 768px){
+    .actualite-card{
+        flex: 1 1 100%;}   
+}
+.actualite-card:hover {
+    transform: scale(1.05); /* Agrandit au survol */
+}
+
+.actualite-card img {
+    width: 100%; /* Largeur complète */
+    height: 150px; /* Hauteur fixe */
+    object-fit: cover; /* Conserve proportions */
+}
+
+.actualite-card h3 {
+    margin: 10px; /* Espacement interne */
+    font-size: 18px; /* Taille texte */
+    color: #333; /* Couleur gris foncé */
+}
+
+.actualite-card p {
+    margin: 10px; /* Espacement interne */
+    color: #666; /* Couleur gris clair */
+    font-size: 14px; /* Taille texte */
 }
 
 footer {
-    font-family: Arial, sans-serif;
-    background-color: #D2B48C;
+    font-family: Arial, sans-serif; /* Police simple */
+    background-color: #3e2b2b; /* Couleur marron foncé */
 }
-.navbar2{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap:10px;
-    flex-wrap: wrap; }
+
+.navbar2 {
+    padding: 20px; /* Espacement interne */
+    display: flex; /* Disposition flexible */
+    justify-content: space-between; /* Espacement égal */
+    gap: 10px; /* Espace entre éléments */
+    flex-wrap: wrap; /* Retourne ligne si nécessaire */
+}
