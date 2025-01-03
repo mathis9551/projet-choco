@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../../../projet%20choco/Accueilindex.css">
+    <link rel="stylesheet" href="Accueilindex.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>Ma première page HTML</title>
 </head>
 <body>
     <header>
         <!--Création de l'en têtê du site  -->
         <nav class="navbar1">
-            <img src="../../../../../projet%20choco/Image.jpg" height="66" width="100" alt="logo de l'enseigne" alt="logo"/>
+            <img src="Image-Photoroom-Photoroom.png" height="85.8" 
+            width="130" alt="logo de l'enseigne" alt="logo"/>
             <h1> Séraphin Parys</h1>
             <div class="titre">
 
             </div>
             <ul>
-                <a href="#">acceuil</a>
-                <a href="notrehistoire.html">Notre démarches sur le </a>
+                <a href="accueil.html">acceuil</a>
+                <a href="notrehistoire.html">Notre histoire </a>
                 <a href="nosdemarches.html">Nos démarches</a>
                 <a href="galeriesphotos.html"> Galeries photos</a>
                 <a href="contact.html">Contact</a>
@@ -27,11 +29,63 @@
         </nav>
 
     </header>
-    <h1>Bienvenue sur ma page web 1 </h1>
+    
+    <div class="carousel">
+        <div class="carousel-track">
+          <img class="carousel-item" src="/images/close-up-chocolate-arrangement .jpg"> 
+          <img class="carousel-item" src="images/close-up-cocoa-powder-with-truffles .jpg"> 
+          <img class="carousel-item" src="images/top-view-chocolate-sweets-assortment.jpg">
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          function startCarousel() {
+            const $track = $('.carousel-track');
+            const itemWidth = $('.carousel-item').outerWidth(true);
+      
+            setInterval(function () {
+              $track.animate(
+                { left: `-${itemWidth}px` },
+                2000,
+                function () {
+                  $track.append($track.children().first());
+                  $track.css('left', '0');
+                }
+              );
+            }, 3000);
+          }
+      
+          startCarousel();
+        });
+      </script>
+
+<main>
+  <section id="actualites">
+    <h2>Actualités</h2>
+    <div class="actualites-container">
+      <article class="actualite-card">
+        <img src="images/DALL·E 2024-12-30 11.18.57 - A high-quality .webp" alt="Nouveauté produit">
+        <h3>Lancement d'une nouvelle gamme</h3>
+        <p>Découvrez notre nouvelle collection de chocolats raffinés, disponible dès maintenant dans nos boutiques.</p>
+      </article>
+      <article class="actualite-card">
+        <img src="images/DALL·E 2024-12-30 11.19.03 - A festive scene.webp" alt="Événement spécial">
+        <h3>Événement spécial à Reims</h3>
+        <p>Rejoignez-nous pour une dégustation exclusive dans notre boutique rue Bioko, ce samedi à 15h.</p>
+      </article>
+      <article class="actualite-card">
+        <img src="images/DALL·E 2024-12-30 11.19.12 - A festive promotional .webp" alt="Promotion">
+        <h3>Promotion de fin d'année</h3>
+        <p>Bénéficiez de -20% sur toute notre gamme de chocolats jusqu'au 31 décembre.</p>
+      </article>
+    </div>
+  </section>
+</main>
 
 <footer>
     <nav class="navbar2">
-        <img src="../../../../../projet%20choco/Image.jpg" height="66" width="100" alt="logo de l'enseigne"/>
+      <img src="Image-Photoroom-Photoroom.png" height="85.8" width="130" alt="logo de l'enseigne" alt="logo"/>
 
         </div>
         <ul>
